@@ -1,7 +1,15 @@
 # CreateNestedPythonDicts
 This little function is ment to create nested Python dictionaries from a stack of keys.
 
+# Installation
+
+Just copy the file into your python directory.
+
+# Usage
+
 ```
+from createNestedDict import create_nested_dict
+
 target_dict = {}
 
 for key1 in keyGroup1:
