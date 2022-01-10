@@ -1,4 +1,4 @@
-def create_nested_dict(target, *keys):
+def create_nested_dict(target, *keys, value = None):
     r"""
         params:
             - target: dict
@@ -22,12 +22,12 @@ def create_nested_dict(target, *keys):
     def recursion(sub_target, level):
         # stop recursion at the end of 
         if level == len(keys)-1:
-            sub_target[keys[level]] = None
+            sub_target[keys[level]] = value
         else:
             try:
                 # try if key is already inserted
                 sub_target[ keys[level] ]
-            except:
+            except KeyError:
                 # otherwise create next level dict at this key
                 sub_target[ keys[level] ] = {}
 
